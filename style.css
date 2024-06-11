@@ -1,0 +1,100 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.videos{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#remoteVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#webcamVideo {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.lower-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body:hover .lower-bar {
+  opacity: 1;
+}
+
+button {
+  background-color: #25D366;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #128C7E;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+@media screen and (max-width:640px) {
+  #webcamVideo {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    z-index: 100;
+  }
+  button {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
